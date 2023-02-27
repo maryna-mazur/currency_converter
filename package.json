@@ -1,20 +1,23 @@
 {
   "name": "currency_converter",
+  "homepage": "https://maryna-mazur.github.io/currency_converter/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "deploy": "./deploy.sh",
+    "preview": "vite preview",
     "build": "vite build",
-    "preview": "vite preview"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "vue": "^3.2.45",
-    "sass": "^1.58.0"
+    "sass": "^1.58.0",
+    "vue": "^3.2.45"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
+    "gh-pages": "^5.0.0",
     "vite": "^4.1.0"
   }
 }
